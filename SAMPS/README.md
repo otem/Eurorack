@@ -1,5 +1,6 @@
-﻿# SAMPS
+# SAMPS
 Teensy 4.0 Eurorack Sample Player
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PT_Po-hL2u8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 A simple polyphonic sample player with effects. All sample playback credit to Sandro on the Teensy forum. Probably a better audio out schematic can be found here (the bi example, first image): [Teensy Forum](https://forum.pjrc.com/threads/26694-Interfacing-with-a-modular-synth?p=55115&viewfull=1#post55115)
 
@@ -32,6 +33,3 @@ A simple polyphonic sample player with effects. All sample playback credit to Sa
  - 1x 100 Resistor
  - Eurorack power connector. You will need 5v power from your case. If you don't have it you can use a 7805 to get 5v from 12v
  - I think that is everything, double check the schematic in case I missed something.
-
-   
-
