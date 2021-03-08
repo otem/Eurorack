@@ -1,5 +1,5 @@
-# Teensy Drum
-Teensy 3.2 Eurorack Drum Module
+# Beatstep Pro Breakout 
+Teensy LC MIDI manipulation
 
 [![Alt text](https://img.youtube.com/vi/k31UBpTMYCM/maxresdefault.jpg)](https://youtu.be/k31UBpTMYCM)
 
