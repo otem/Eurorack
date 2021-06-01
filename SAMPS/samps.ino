@@ -266,7 +266,7 @@ void setup() {
   tracking = true;
   //USBMIDI
   usbMIDI.setHandleNoteOff(OnNoteOff);
-  usbMIDI.setHandleNoteOn(OnNoteOn)å;
+  usbMIDI.setHandleNoteOn(OnNoteOn);
 
   fIndex = 0;
   updateScreen(false,"",0);
