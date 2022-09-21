@@ -7,6 +7,7 @@ Teensy 4.1 Eurorack sample player
  - [Stereo Plate Reverb](https://github.com/hexeguitar/t40fx/tree/main/Hx_PlateReverb)
 
 ## MIDI CCs
+MIDI is configured to listed to channel 11. This can be changed in the code.
  - 1-8  : Pitch for each sample
  - 9-16 : Decay for each sample
  - 17   : Filter Frequency
