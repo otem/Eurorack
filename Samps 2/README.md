@@ -11,7 +11,7 @@ Teensy 4.1 Eurorack sample player with 8 note polyphony.
  - Full BOM is in schematic folder
 
 ## File Structure
-It's very important to have your samples in a specific structure. The root should have a folder called samples. Inside that are your kits with whatever name you like. Inside them, there must be a total of 8 wav files (16bit, 44.1khz) named 1-8.wav. Like This:
+It's very important to have your samples in a specific structure. The root should have a folder called samples. Inside that are your instruments with whatever name you like. Inside them, there must be a total of 8 wav files (16bit, 44.1khz) named 1-8.wav. Like This:
 
 ![File structure](https://github.com/otem/Eurorack/blob/master/Samps%202/other/file%20structure.png?raw=true)
 
@@ -24,3 +24,4 @@ MIDI is configured to listed to channel 2. This can be changed in the code.
  - 2  : Master velocity, can be used to turn up/down sample volume if digital clipping occurs
  - 3  : Reverb Mix
  - 4  : Reverb Size
+
