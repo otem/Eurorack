@@ -1,7 +1,7 @@
 # Samps 2
 Teensy 4.1 Eurorack sample player with 8 note polyphony.
 
-<!-- [![Samps 2 Video](https://img.youtube.com/vi/n3zxz7AQ94s/hqdefault.jpg)](https://www.youtube.com/watch?v=n3zxz7AQ94s) -->
+[![Samps 2 Video](https://img.youtube.com/vi/VPkpoh57Xw4/hqdefault.jpg)](https://www.youtube.com/watch?v=VPkpoh57Xw4)
 
 ## Requirements
  - [Teensy Variable Playback library from newdigate.](https://github.com/newdigate/teensy-variable-playback)
