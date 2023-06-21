@@ -265,7 +265,7 @@ void handleNoteOn(uint8_t channel, uint8_t pitch, uint8_t velocity){
 
     if (samps[voiceIndex+sampleSelect]) {
       // Serial.println("voice: "+String(voiceIndex)+" | sample: "+String(voiceIndex+sampleSelect));
-      sampPlayers[voiceIndex]->playWav(samps[voiceIndex+sampleSelect]->sampledata, samps[voiceIndex+sampleSelect]->samplesize);
+      sampPlayers[voiceIndex]->playWav(samps[voiceIndex+sampleSelect]->sampledata);
     }
   }
 }
