@@ -1,7 +1,6 @@
 #include <Arduino.h>
 #include <Audio.h>
 #include <TeensyVariablePlayback.h>
-#include <MIDI.h>
 #include "flashloader.h"
 #include <ResponsiveAnalogRead.h>
 #include <Adafruit_GFX.h>
@@ -154,6 +153,7 @@ int prevEncPos;
 bool forwardPlay = true;
 bool playMode = true;
 int loadedFile = -1;
+bool loading;
 
 
 elapsedMillis printTime;
@@ -249,8 +249,10 @@ void setup(){
 }
 
 void loop(){
-  usbMIDI.read();
-  MIDI.read(2);
+  if(!loading){
+    usbMIDI.read();
+    MIDI.read(2);
+  }
 
   for (size_t i = 0; i < 4; i++) {
     analogs[i].update();
@@ -293,9 +295,7 @@ void loop(){
   vca = map(float(analogRead(A15)),0,1000,2,0);
   vca = constrain(vca,0,2);
   AudioNoInterrupts();
-  for (size_t i = 0; i < 8; i++) {
-    dc1.amplitude(vca,5);
-  }
+  dc1.amplitude(vca,5);
   AudioInterrupts();
 
   if (printTime > 500) {
@@ -342,8 +342,8 @@ void loop(){
       dirIndex > dirCount-2 ? dirIndex = dirCount-2 : dirIndex++;
     }
 
-    Serial.println("Dir: "+String(dirIndex));
-    Serial.println("loadedFile: "+String(loadedFile));
+    // Serial.println("Dir: "+String(dirIndex));
+    // Serial.println("loadedFile: "+String(loadedFile));
     displayDirs();
 
     prevEncPos = encPos;
@@ -401,7 +401,7 @@ void handleNoteOn(uint8_t channel, uint8_t pitch, uint8_t velocity){
 
     envs[voiceIndex]->noteOn();
     if (samps[voiceIndex]) {
-      sampPlayers[voiceIndex]->playWav(samps[voiceIndex]->sampledata, samps[voiceIndex]->samplesize);
+      sampPlayers[voiceIndex]->playWav(samps[voiceIndex]->sampledata);
     }
     noteTimes[voiceIndex] = 0;
 

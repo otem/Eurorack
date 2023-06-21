@@ -35,6 +35,12 @@ void getDirectories(File dir, int numSpaces) {
 }
 
 void loadFiles(){
+  loading = true;
+  dc1.amplitude(0,1);
+  for (size_t i = 0; i < 8; i++) {
+    envs[i]->noteOff();
+  }  
+
   display.clearDisplay();
   display.setCursor(2,4);
   display.print("Loading");
@@ -50,6 +56,8 @@ void loadFiles(){
   }
   loadedFile = dirIndex;
   displayDirs();
+  loading = false;
+  dc1.amplitude(vca,5);
 }
 
 void printSpaces(int num) {
